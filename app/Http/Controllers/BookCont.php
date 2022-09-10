@@ -14,10 +14,10 @@ class BookCont extends Controller
      */
     public function index()
     {
-        $books = Book::latest()->paginate(5);
+        $books = Book::all();
       
         return view('books.index',compact('books'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1));
     }
 
     /**
@@ -39,19 +39,34 @@ class BookCont extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'copies' => 'required', 
-            'note' => 'required', 
-            'parts' => 'required', 
-            'publication' => 'required', 
-            'documentation' => 'required', 
-            'review' => 'required', 
-            'writer_name' => 'required', 
-            'title' => 'required', 
-            'field' => 'required', 
-            'insert_date' => 'required',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-      
-        Book::create($request->all());
+
+        $input = $request->all();
+
+        if(!empty($request->hasFile('photo'))){
+
+            $image = $request->file('photo');
+            $photoname = date('YmdHis').'.'.$image->extension();
+            $filePath = public_path('/uploads/books/');
+            $image->move($filePath, $photoname);
+            $input['photo'] = $photoname;
+            
+            }
+
+        // $name = $request->file('photo')->getClientOriginalName();
+ 
+        // $path = $request->file('photo')->store('public/uploads/books');
+ 
+ 
+        // $save = new Book;
+ 
+        // $save->name = $name;
+        // $save->path = $path;
+ 
+        // $save->save();
+
+        Book::create($input);
        
         return redirect()->route('books.index')
                         ->with('success','Book inserted successfully.');
@@ -89,19 +104,25 @@ class BookCont extends Controller
     public function update(Request $request, Book $book)
     {
         $request->validate([
-            'copies' => 'required', 
-            'note' => 'required', 
-            'parts' => 'required', 
-            'publication' => 'required', 
-            'documentation' => 'required', 
-            'review' => 'required', 
-            'writer_name' => 'required', 
-            'title' => 'required', 
-            'field' => 'required', 
-            'insert_date' => 'required',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-      
-        $book->update($request->all());
+
+         $input = $request->all();
+  
+         
+       
+        if(!empty($request->hasFile('photo'))){
+            $image = $request->file('photo');
+            $photoname = date('YmdHis').'.'.$image->extension();
+            $filePath = public_path('/uploads/books/');
+            $image->move($filePath, $photoname);
+            $input['photo'] = $photoname;
+            
+            }else{
+            unset($input['image']);
+        }
+          
+        $book->update($input);
       
         return redirect()->route('books.index')
                         ->with('success','Book updated successfully');

@@ -9,14 +9,12 @@ class Student extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name', 'surname', 'Dadname', 'DadJob', 'day', 'month', 'year', 'place', 'residence', 'scholar_year', 'Tel'
+        'name', 'surname', 'sex', 'job', 'DadJob', 'MomJob', 'day', 'month', 'year', 'place', 'residence', 'photo', 'email', 'scholar_year', 'tel'
     ];
-    public $timestamps = false;
 }
 
 class ABC extends Model {
 
-    const CREATED_AT = null;
     const UPDATED_AT = null;
 
 }

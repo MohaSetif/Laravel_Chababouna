@@ -23,18 +23,10 @@
     </div>
 @endif
    
-<form action="{{ route('books.store') }}" method="POST">
+<form action="{{ route('books.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
   
      <div class="row">
-
-
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Insert Date:</strong>
-                <input type="date" name="insert_date" class="form-control" value="{{old('insert_date')}}">
-            </div>
-        </div>
 
 
         <div class="col-xs-12 col-sm-12 col-md-12">
@@ -108,9 +100,15 @@
             </div>
         </div>
 
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Photo:</strong>
+                <input type="file" name="photo" class="form-control">
+            </div>
+        </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">اضغط</button>
         </div>
     </div>
    

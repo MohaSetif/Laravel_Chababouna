@@ -25,21 +25,43 @@ body{
     font-size: 10px;
 }
 
-#SearchBar{
-  height: 25px;
-  width: 1345px;
-  font-size: 20px;
+.example input[type=text] {
+  padding: 4px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: right;
+  width: 89.15%;
+  background: #f1f1f1;
   direction: rtl;
   font-family: Janna;
-  display: block;
-  border: none;
 }
 
+.example button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #0db116;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+.example button:hover {
+  background: #74dd7d;
+}
+
+.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
   .table{
     margin-top: 11px;
     width: 1350px;
     background-color: white;
-    max-height: 600px;
+    max-height: 590px;
     overflow-y: auto;
   }
 
@@ -47,6 +69,7 @@ body{
     width: 100%;
     border-collapse: collapse;
     background-color: white;
+    height: auto;
   }
 
   table thead th,
@@ -77,13 +100,27 @@ table tbody tr:hover{
 
 @media (max-width: 560px){
 
-  #SearchBar{
-    height: 25px;
-    width: 355px;
-    font-size: 20px;
+  .example input[type=text] {
+    padding: 4px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: right;
+    width: 87.2%;
+    background: #f1f1f1;
     direction: rtl;
     font-family: Janna;
-    display: block;
+  }
+  
+  .example button {
+    float: left;
+    width: 10%;
+    padding: 10px;
+    background: #0db116;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
   }
   
     .table{
@@ -122,5 +159,4 @@ table tbody tr{
     height: 50px;
 }
     
-  }
-  
+}

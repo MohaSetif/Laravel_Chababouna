@@ -16,16 +16,7 @@
       <div class="menu-btn"></div>
       <div class="navigation">
         <div class="navigation-items">
-          @if(session('name') == NULL)
-          <a href="التسجيل">سجل الآن</a>
-          @else 
-            <div class="dropdown">
-               <button class="dropbtn">{{session('name')}}</button>
-               <div class="dropdown-content">
-                <a href="/logout">الخروج من الصفحة</a>
-               </div>
-            </div>
-          @endif
+          <a href="الخيارات">سجل الآن</a>
         </div>
       </div>
     </header>
@@ -38,7 +29,27 @@
       <video class="video-slide active" src="/vid/214180c8.mp4" autoplay muted loop></video>
       <div class="content">
         <h1>من إنجازاتنا</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="Ijaza">
+          <div class="block">
+        <img src="/img/pdf2png/DOC001/DOC001-1.png">
+        <img src="/img/pdf2png/DOC002/DOC002-1.png">
+        <img src="/img/pdf2png/DOC003/DOC003-1.png">
+        </div>
+        <div class="block">
+        <img src="/img/pdf2png/DOC004/DOC004-1.png">
+        <img src="/img/pdf2png/DOC005/DOC005-1.png">
+        <img src="/img/pdf2png/DOC006/DOC006-1.png">
+        </div>
+        <div class="block">
+        <img src="/img/pdf2png/DOC007/DOC007-1.png">
+        <img src="/img/pdf2png/DOC008/DOC008-1.png">
+        <img src="/img/pdf2png/DOC009/DOC009-1.png">
+        </div>
+        <div class="block">
+        <img src="/img/pdf2png/DOC010/DOC010-1.png">
+        <img src="/img/pdf2png/DOC011/DOC011-1.png">
+        </div>
+        </div>
       </div>
       <div class="content">
         <h1>نشاطاتنـا</h1>
@@ -131,8 +142,50 @@
       </div>
 
       <div class="content">
-        <h1>مدرستـنا</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h1>لــجـانـنـا</h1>
+        <p>يساعد الجمعية العامة لجان دائمة، مكلفة بدراسة المسائل المتعلقة بأهداف الجمعية. اللجان الدائمة هي ثلاثة:</p>
+        <p>لجنة التربية و التعليم و هي تضم:</p>
+        <p>خلية التعليم القرآني و فيها أربع أقسام:</p>
+        <ol>
+          <li>قسم تحفيظ القرآن الكريم.</li>
+          <li>قسم مراجعة القرآن الكريم.</li>
+          <li>قسم تصحيح التلاوة.</li>
+          <li>قسم الإجازات القرآنية.</li>
+        </ol>
+
+        <p>خلية اللغة العربية و اللغات الحية:</p>
+        <ol>
+          <li>قسم اللغة العربية.</li>
+          <li>قسم اللغة الفرنسية.</li>
+          <li>قسم اللغة الانجليزية.</li>
+        </ol>
+
+        <p>خلية تعليم الإعلام الآلي.</p>
+
+        <p>خلية المسرح و الفنون التشكيلية و التربية المدنية:</p>
+        <ol>
+          <li>قسم المسرح.</li>
+          <li>قسم الرسم و الفنون التشكيلية.</li>
+          <li>قسم التربية المدنية.</li>
+        </ol>
+
+        <p>خلية الاستشارات النفسية:</p>
+        <ol>
+          <li>قسم الاستشارات النفسية.</li>
+          <li>قسم الأرطفوني.</li>
+          <li>قسم الاستشارات الأسرية و تربية الأطفال.</li>
+        </ol>
+
+        <p>خلية المسرح و الفنون التشكيلية و التربية المدنية:</p>
+        <ol>
+          <li>قسم الإرشاد الديني.</li>
+          <li>قسم الاستشارات القانونية.</li>
+        </ol>
+
+        <p>لجنة الإعلام و الاتصال</p>
+
+        <p>لجنة التجهيز و الصيانة و الوسائل</p>
+
       </div>
       <div class="content">
         <h1>مكــتبـتـنـا</h1>
@@ -141,7 +194,26 @@
       </div>
       <div class="content active">
         <h1>صـفحــتـنا</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>
+          جمعية شبابنا هي جمعية علمية ثقافية، اعتمدت سنة 2013م تحت رقم 2013/40م من بلدية سطيف و بمعية مديرية الثقافة لولاية سطيف. شهدت الجمعية تغيرا في القانون الأساسي بتاريخ 2016/07/06م و تغييرا ثان في مهام أعضاء المكتب التنفيذي مرتين الأول بتاريخ 2018/12/29م و الثاني بتاريخ 2019/07/17م. كل هذا من أجل السير الحسن للجمعية. لها أهداف هي:
+        </p>
+        <ol>
+          <li>تربية الجيل على العلم و الأخلاق و الوطنية.</li>
+          <li>فتح آفاق جديدة أمام الشباب على حقائق العلم و المعرفة و الثقافة.</li>
+          <li>إجياء المناسبات الدينية و الوطنية.</li>
+          <li>ترسيخ حب الوطن في الناشئة.</li>
+          <li>إقامة نشاطات ترفيهية تعليمية تربوية ثقافية.</li>
+          <li>إقامة ملتقيات فكرية ثقافية، أدبية، تاريخية.</li>
+          <li>توعية الشباب حول مخاطر الآفات الاجتماعية.</li>
+          <li>تنظيم رحلات استكشافية سياحية.</li>
+          <li>إنتاج عروض مسرحية.</li>
+          <li>فتح ناد لتعليم اللغة العربية و اللغات الحية.</li>
+          <li>الاهتمام بالمجال السمعي البصري.</li>
+          <li>تنظيم حفلات فنية إنشادية.</li>
+        </ol>
+        <p>
+          يسهر على هذه الأهداف لجان سخروا أوقاتهم و جهودهم لتحقيقها و هي كما جاءت في المادة 23 من القانون الأساسي للجمعية.
+        </p>
       </div>
       <div class="media-icons">
         <a href="https://www.facebook.com/chababouna.setif" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -149,7 +221,7 @@
       </div>
       <div class="user-icons">
         <a href="https://www.google.com/maps/place/%D9%85%D9%82%D8%B1+%D8%AC%D9%85%D8%B9%D9%8A%D8%A9+%D8%B4%D8%A8%D8%A7%D8%A8%D9%86%D8%A7+%D8%B3%D8%B7%D9%8A%D9%81%E2%80%AD/@36.202689,5.4121435,17z/data=!3m1!4b1!4m5!3m4!1s0x12f315958517f2e7:0x9a592b6588f73c9b!8m2!3d36.2026847!4d5.4143322" target="_blank"><i class='fa fa-map-marker'></i></a>
-        <a href="tel:+213661667501" aria-label="Call" data-hover="0661 66 75 01" class="hoveritem"><i class="fa fa-phone"></i></a>
+        <a href="tel:+213661667501" aria-label="Call" data-hover="0661 66 75 01 / 0770 75 72 77" class="hoveritem"><i class="fa fa-phone"></i></a>
       </div>
 
 

@@ -125,22 +125,18 @@ section{
   width: 100%;
 }
 
-.home .content p{
-  margin-bottom: 65px;
-  font-family: Shoroq;
-  font-size: 50px;
-}
 
 .home .content a{
   background: #fff;
   padding: 15px 35px;
   color: #26e930;
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   border-radius: 2px;
   border-radius: 2px;
   transition: 0.5s;
+  margin-top: 30px
 }
 
 .home .content a:hover{
@@ -264,6 +260,14 @@ section{
   margin-right: 5px;
 }
 
+.home .content ol li {
+  font-family: Shoroq;
+  font-size: 20px;
+}
+
+.home .content ol{
+  margin-bottom: 20px;
+}
 
 @media (max-width: 1040px){
   header{
@@ -339,6 +343,21 @@ section{
   .home .content a{
     font-size: 15px;
   }
+
+  .home .content p {
+    font-family: Shoroq;
+    font-size: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .home .content ol li {
+    font-family: Shoroq;
+    font-size: 20px;
+  }
+
+  .home .content ol{
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 560px){
@@ -347,6 +366,15 @@ section{
     font-size: 3em;
     line-height: 60px;
     text-align: center;
+  }
+
+  .home .content ol li {
+    font-family: Shoroq;
+    font-size: 20px;
+  }
+
+  .home .content ol{
+    margin-bottom: 20px;
   }
 
   .row{
@@ -421,11 +449,27 @@ section{
 }
 
 .home .content p {
-  margin-bottom: 65px;
   font-family: Shoroq;
-  font-size: 20px;
+  font-size: 15px;
+  margin-bottom: 30px;
 }
 
+.home .content ul li {
+  font-family: Shoroq;
+  font-size: 15px;
+}
+
+}
+
+.home .content p {
+  font-family: Shoroq;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.home .content ul li {
+  font-family: Shoroq;
+  font-size: 30px;
 }
 
 .slider-navigation{
@@ -516,67 +560,21 @@ height: 450px;
   transform: scale(1.08);
  }
 
-
-/* 
-.cards{
-  width: 1500px;
-  width: 70%;
-  margin: 0 auto;
-}
- .row{
-  display: flex;
- }
-
- .card{
-  background-color: #fff;
-  color: black;
-  margin: 20px;
-  padding: 20px;
-  transition: 0.5s;
-  border-radius: 20px;
- }
-
- .card:hover{
-  transform: scale(1.08);
- }
-
-.card .card_img img{
-  width: 100%;
-  height: 100px;
-}
-
-.Sec1{
+ .Ijaza .block{
   display: block;
-}
-
-span{
   justify-content: center;
-  align-items: center;
-}
+ }
 
-.Sec1 span{
-  font-size: 35px;
-  justify-content: center;
-  align-items: center;
+.Ijaza img{
+  width: 30%;
+  height: 30%;
 }
-
-.Sec2 span{
-  font-size: 35px;
-  justify-content: center;
-  align-items: center;
-}
-
-.Sec3 span{
-  font-size: 35px;
-  justify-content: center;
-  align-items: center;
-} */
 
 .hoveritem:before {
   content: attr(data-hover);
   visibility: hidden;
   opacity: 0;
-  width: 200px;
+  width: 300px;
   background-color: black;
   color: #fff;
   text-align: center;
@@ -637,3 +635,4 @@ span{
 .dropdown:hover .dropbtn {
   background-color: white;
 }
+

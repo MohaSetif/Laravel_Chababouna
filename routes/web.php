@@ -1,11 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\JoinControl;
+use App\Http\Controllers\CourseController;
+use App\Http\Controllers\IlliterateController;
 use App\Http\Controllers\EtudiantController;
 use App\Http\Controllers\Bookstore;
 use App\Http\Controllers\BookCont;
-use App\Http\Controllers\StudentCont;
-
+use App\Http\Controllers\ChababounaUserCont;
+use App\http\Controllers\PendingStatus;
+use App\Http\Controllers\TamhidiController;
+use App\Http\Controllers\TahdiriController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,29 +27,38 @@ Route::get('/', function () {
 });
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'ChababounaAdmin'], function () {
     Voyager::routes();
 });
 
 
 Route::view('الصفحة-الرئيسية', 'MainPage');
 
-Route::view('التسجيل', 'Signin');
+Route::view('التسجيل-في-المدرسة-القرآنية', 'Signin');
 Route::view('صفحة-الدخول', 'UserExists');
-Route::post('التسجيل', [EtudiantController::class, 'registerUser']);
+Route::post('التسجيل', [EtudiantController::class, 'AddStudent']);
 Route::post('صفحة-الدخول', [EtudiantController::class, 'loginUser']);
 
 
-//Route::view("add", 'Emp');
-//Route::post('add', [EmpCont::class, 'add']);
+Route::view('إرسال-الاستمارة', 'AfterSignin');
+
+
+Route::view('المستوى-التحضيري', 'Tahdiri');
+Route::view('المستوى-التمهيدي', 'Tamhidi');
+Route::post('tamhidilog', [TamhidiController::class, 'AddChild']);
+Route::post('tahdirilog', [TahdiriController::class, 'AddChild']);
+
+
+// Route::view("add", 'Emp');
+// Route::post('add', [EmpCont::class, 'add']);
 
 
 Route::get('مكتبتنا', [Bookstore::class, 'list']);
 
 
 Route::resource('books', BookCont::class);
-Route::resource('students', StudentCont::class);
-
+Route::resource('chababounausers', ChababounaUserCont::class);
+Route::post('PendingStatus', [PendingStatus::class, 'changeStatus']);
 
 Route::get('/logout', function () { 
     if(session()->has('name')){
@@ -52,3 +66,21 @@ Route::get('/logout', function () {
     }
     return redirect('الصفحة-الرئيسية');
 });
+
+
+Route::view('اختيار-المقر', 'Children');
+Route::view('دروس-الدعم', 'Courses');
+Route::post('CourseAdd', [CourseController::class, 'AddCourse']);
+Route::view('سجلوا-أولادكم', 'ChildrenLogin');
+Route::view('user', 'MemberData');
+Route::view('childData', 'DisplayChildData');
+Route::view('memberLog', 'memberLog');
+
+
+Route::view('الانضمام-إلى-الجمعية', 'Join');
+Route::post('NewJoin', [JoinControl::class, 'AddUser']);
+
+Route::view('الخيارات', 'LinkCard');
+
+Route::view('التسجيل-في-محو-الأمية', 'FormIlliterate');
+Route::post('added', [IlliterateController::class, 'AddIlliterate']);

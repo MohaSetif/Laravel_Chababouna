@@ -4,11 +4,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/LoginStyle.css">
+    <link rel="icon" type="image/x-icon" href="/img/android-chrome-512x512.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script>
+			$( function() { // jquery document ready function
+				$( '#first_jquery_checkbox' ).on( 'click', function() { // do things when the checkbox gets clicked
+					if ( this.checked ) { // check box is checked so disable input and select
+						$( '#first_jquery_input1' ).prop( 'disabled', 'disabled' );
+                        $( '#first_jquery_input2' ).prop( 'disabled', 'disabled' );
+					} else { // checkbox is not checked, make input and select editable
+						$( '#first_jquery_input1' ).prop( 'disabled', '' );
+                        $( '#first_jquery_input2' ).prop( 'disabled', '' );
+					}
+				} )	
+			} );
+		</script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
-    <title>صفحة التسجيل</title>
+    <title>التعليم القرآني</title>
 </head>
 <body>
-<form action="التسجيل" method="POST">
+<form action="التسجيل" method="POST" enctype="multipart/form-data">
     @csrf
     <section>
     <div class="ImgBox">
@@ -16,7 +31,7 @@
     </div>
     <div class="ContentBox">
         <div class="FormBox">
-            <h2>صفحة التسجيل</h2>
+            <h2>التعليم القرآني</h2>
                 <div class="InputBox">
                     <span>:الاسم</span>
                     <input type="text" name="name" value="{{old('name')}}">
@@ -34,24 +49,39 @@
                     @enderror
                 </div>
                 <div class="InputBox">
-                    <span>:اسم الولي</span>
-                    <input type="text" name="Dadname" value="{{old('Dadname')}}">
-                    @error('Dadname')
+                    <span>:المهنة</span>
+                    <input type="text" name="job" value="{{old('job')}}" id="first_jquery_input1">
+                    @error('job')
                         <div class="error">
-                            <?php echo 'نسيت ملء اسم الولي'; ?>
+                            <?php echo 'نسيت أن تضع مهنتك'; ?>
                         </div>
                     @enderror
-                    <span>:المهنة</span>
+                    
+                    <span>:مهنة الولي</span>
                     <input type="text" name="DadJob" value="{{old('DadJob')}}">
-                    @error('DadJob')
+                </div>
+                <div class="InputBox">
+                    <span>:مهنة الأم</span>
+                    <input type="text" name="MomJob" value="{{old('MomJob')}}">
+                    <span>:ذكر</span><input type="radio" name="sex" value="ذكر">
+                    <span>:أنثى</span><input type="radio" name="sex" value="أنثى">
+                    @error('sex')
                         <div class="error">
-                            <?php echo 'نسيت ملء مهنة الولي'; ?>
+                            <?php echo 'نسيت أن تضع جنسك'; ?>
                         </div>
                     @enderror
                 </div>
+
+            <div class="InputBox">  
+                <div class="check">
+                    <span for="first_jquery_checkbox">(أقل من 18؟ (هذه الفئة معنية فقط بوضع مهنة الأب و عدم كتابة البريد الالكتروني</span>
+                    <input type="checkbox" id="first_jquery_checkbox" name="Over">
+                </div>
+            </div>
+
                 <div class="InputBox">
                     <span>:تاريخ الميلاد</span>
-                    <select name="day">
+                    <select name="day" id="day">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -84,22 +114,22 @@
                         <option>30</option>
                         <option>31</option>
                     </select>
-                    <select name="month">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
+                    <select name="month" id="month">
+                        <option>جانفي</option>
+                        <option>فيفري</option>
+                        <option>مارس</option>
+                        <option>أفريل</option>
+                        <option>ماي</option>
+                        <option>جوان</option>
+                        <option>جويلية</option>
+                        <option>أوت</option>
+                        <option>سبتمبر</option>
+                        <option>أكتوبر</option>
+                        <option>نوفمبر</option>
+                        <option>ديسمبر</option>
                     </select>
                     <div class="YearBox">
-                        <input type="number" name="year" value="{{old('year')}}">
+                        <input type="number" name="year" value="{{old('year')}}" id="year">
                         @error('year')
                         <div class="error">
                             <?php echo 'نسيت ملء سنة الميلاد'; ?>
@@ -126,6 +156,7 @@
                 <div class="InputBox">
                    <span>:المستوى الدراسي</span>
                    <select name="scholar_year">
+                        <option>التمهيدي</option>
                         <option>التحضيري</option>
                         <option>الابتدائي</option>
                         <option>المتوسطي</option>
@@ -133,24 +164,63 @@
                         <option>الجامعي</option>
                         <option>خيار آخر</option>
                    </select>
+                   <span>:المقر</span>
+                   <select name="local">
+                        <option>-البشير الإبراهيمي -لعرارسة</option>
+                        <option>-عائشة أم المؤمنين -ديرو</option>
+                   </select>
                 </div>
+
+                <div class="InputBox">
+                    <span>:البريد الالكتروني</span>
+                    <input type="email" name="email" value="{{old('email')}}" id="first_jquery_input2">
+                    @error('email')
+                        <div class="error">
+                            <?php echo 'نسيت ملء البريد الالكتروني '; ?>
+                        </div>
+                    @enderror
+                </div>
+
+            
                 <div class="InputBox">
                     <span>:رقم الهاتف</span>
-                    <input type="text" name="Tel" value="{{old('Tel')}}">
+                    <input type="text" name="tel" value="{{old('tel')}}">
                     @error('Tel')
                         <div class="error">
                             <?php echo 'نسيت ملء رقم الهاتف أو هو خاطئ'; ?>
                         </div>
                     @enderror
+                    <br><br>
+                    <span>أدخل صورتك</span>
+                    <input type="file" name="photo" id="photo" class="custom-file-input">
                 </div>
+
                 <div class="InputBox">
                     <button type="submit">سجل الآن</button>
-                    <a href="صفحة-الدخول">مسجل من قبل؟</a>
                 </div>
             </div>
         </div>
     </form>
 </section>
 </form>
+
+<script type="text/javascript">
+			( function() { // javascript document ready function
+				var firstJavaScriptInput1 = document.getElementById( 'first_javascript_input1' );
+                var firstJavaScriptInput2 = document.getElementById( 'first_javascript_input2' );
+				var firstJavaScriptCheckbox = document.getElementById( 'first_javascript_checkbox' );
+				
+				firstJavaScriptCheckbox.addEventListener( 'click', function() { // do things when the checkbox gets clicked
+					if ( this.checked ) { // check box is checked so disable input and select
+						firstJavaScriptInput1.disabled = 'disabled';
+                        firstJavaScriptInput2.disabled = 'disabled';
+					} else { // checkbox is not checked, make input and select editable
+						firstJavaScriptInput1.disabled = '';
+                        firstJavaScriptInput2.disabled = '';
+					}
+ 				} );
+			} )();
+		</script>
+
 </body>
 </html>

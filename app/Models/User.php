@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+//use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -18,9 +18,7 @@ class User extends \TCG\Voyager\Models\User
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'surname', 'sex', 'job', 'day', 'month', 'year', 'place', 'residence', 'hobby', 'help', 'email', 'photo', 'scholar_year', 'tel', 'DadTel'
     ];
 
     /**

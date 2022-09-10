@@ -4,14 +4,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/BooksTable.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="/img/android-chrome-512x512.png">
     <title>كتبنا</title>
 </head>
 <body>
-<input type="text" name="SearchBar" id="SearchBar" onkeyup="return myFunction()" placeholder="ابحث...">
+<div class="example">
+    <button type="submit" onclick="return myFunction()"><i class="fa fa-search"></i></button>
+    <input type="text" name="SearchBar" id="SearchBar" placeholder="ابحث...">
+</div>
 <div class="table">
 <table id="userTable">
     <thead>
         <tr>
+           <th>الصورة</th>
            <th>عدد النسخ</th>
            <th>الملاحظة</th>
            <th>عدد الأجزاء</th>
@@ -28,7 +34,8 @@
     @foreach($books as $item)
     <tbody>
       <tr>
-      <td>{{ $item->copies }}</td>
+      <td><img src="uploads/books/{{ $item->photo }}" width="100px"></td></td>
+        <td>{{ $item->copies }}</td>
         <td>{{ $item->note }}</td>
         <td>{{ $item->parts }}</td>
         <td>{{ $item->publication }}</td>

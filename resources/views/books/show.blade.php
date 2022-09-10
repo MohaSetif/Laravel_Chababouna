@@ -17,7 +17,7 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Insert Date:</strong>
-                {{ $book->insert_date }}
+                {{ $book->created_at }}
             </div>
         </div>
 
@@ -81,6 +81,13 @@
             <div class="form-group">
                 <strong>Copies:</strong>
                 {{ $book->copies }}
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Photo:</strong>
+                <img src="/uploads/books/{{ $book->photo }}" width="100px">
             </div>
         </div>
         

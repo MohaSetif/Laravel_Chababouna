@@ -36,11 +36,11 @@
                 </div>
 
                 <div class="InputBox">
-                    <span>:اسم الولي</span>
-                    <input type="text" name="Dadname" value="{{old('Dadname')}}">
-                    @error('Dadname')
+                    <span>:البريد الالكتروني</span>
+                    <input type="text" name="email" value="{{old('email')}}">
+                    @error('email')
                         <div class="error">
-                            <?php echo 'نسيت ملء اسم الولي'; ?>
+                            <?php echo 'نسيت ملء البريد الالكتروني'; ?>
                         </div>
                     @enderror
                     <br>
