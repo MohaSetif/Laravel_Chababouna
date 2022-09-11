@@ -150,7 +150,15 @@
                         <option>العربي تبسي -سفاهة- 13:00 - 17:00</option>
                         <option>مركز امتنان -القصرية- 10:00 - 12:00</option>
                     </select>
-
+                    </div>
+                <div class="InputBox">
+                    <span>:البريد الالكتروني</span>
+                    <input type="email" name="email" value="{{old('email')}}">
+                    @error('email')
+                        <div class="error">
+                            <?php echo 'نسيت ملء البريد الالكتروني'; ?>
+                        </div>
+                    @enderror
                     <br><br>
                     <span>أدخل صورتك</span>
                     <input type="file" name="photo" id="photo" class="custom-file-input">

@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('residence');
             $table->string('local')->nullable();;
             $table->string('photo');
+            $table->string('email');
             $table->string('tel');
             $table->string('inscripted_in')->default('محو-الأمية');
             $table->timestamps();

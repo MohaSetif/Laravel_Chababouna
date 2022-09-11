@@ -3,12 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Chababounauser;
+use App\Models\Illiterate;
 
 class IlliterateController extends Controller
 {
     function AddIlliterate(Request $req){
-        $i = new Chababounauser;
+
+        $this->validate($req,[
+            'name' => 'required|max:120',
+            'surname' => 'required|max:120',
+            'sex' => 'required',
+            'day' => 'required|max:120',
+            'month' => 'required|max:120',
+            'year' => 'required|max:120',
+            'place' => 'required|max:120',
+            'residence' => 'required|max:120',
+            'photo' => 'required',
+            'email' => 'email|required',
+            'tel' => 'required|regex:/(0)[0-9]{9}/',
+            ]);
+    
+          $illiterate = Illiterate::where([
+            'email' => $req->email,
+          ])->first();
+          if(!$illiterate){
+        $i = new Illiterate;
         $i->name = strip_tags($req->name);
         $i->surname = strip_tags($req->surname);
         $i->sex = $req->sex;
@@ -25,8 +44,23 @@ class IlliterateController extends Controller
             $i->photo = $filename;
         }
         $i->inscripted_in = 'محو-الأمية';
+        $i->email = strip_tags($req->email);
         $i->tel = strip_tags($req->tel);
+
+        // $userCount = Illiterate::where('tel', $i->tel);
+	    // if ($userCount->count()) {
+		//     return Response::json(array('msg' => 'true'));
+	    // } else {
+		//     return Response::json(array('msg' => 'false'));
+	    // }
+
         $i->save();
-        return redirect('إرسال-الاستمارة');
+        return redirect('الصفحة-الرئيسية');
+       }
+       else{
+        echo "<script>";
+        echo "alert('هذا المستخدم موجود');";
+        echo "</script>";
+       }
     }
 }

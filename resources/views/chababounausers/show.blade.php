@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Show Chababouna User</h2>
+                <h2> عرض مستخدم </h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('chababounausers.index') }}"> Back</a>
@@ -15,118 +15,130 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>name:</strong>
+                <strong>الاسم:</strong>
                 {{ $chababounauser->name }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>surname:</strong>
+                <strong>اللقب:</strong>
                 {{ $chababounauser->surname }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>sex:</strong>
+                <strong>الجنس:</strong>
                 {{ $chababounauser->sex }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>job:</strong>
+                <strong>المهنة:</strong>
                 {{ $chababounauser->job }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>day:</strong>
+                <strong>مهنة الولي:</strong>
+                {{ $chababounauser->job }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>مهنة الأم:</strong>
+                {{ $chababounauser->job }}
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>يوم الميلاد:</strong>
                 {{ $chababounauser->day }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>month:</strong>
+                <strong>شهر الميلاد:</strong>
                 {{ $chababounauser->month }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>year:</strong>
+                <strong>عام الميلاد:</strong>
                 {{ $chababounauser->year }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>place:</strong>
+                <strong>مكان الميلاد:</strong>
                 {{ $chababounauser->place }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Residence:</strong>
+                <strong>مكان الإقامة:</strong>
                 {{ $chababounauser->residence }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Residence:</strong>
+                <strong>الهواية:</strong>
                 {{ $chababounauser->hobby }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>what you can do:</strong>
+                <strong>مايمكن تقديمه:</strong>
                 {{ $chababounauser->help }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>photo:</strong>
+                <strong>الصورة:</strong>
                 <img src="uploads/utilisateurs/{{ $chababounauser->photo }}" width="100px">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>email:</strong>
+                <strong>البريد الالكتروني:</strong>
                 {{ $chababounauser->email }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>local:</strong>
+                <strong>المقر:</strong>
                 {{ $chababounauser->local }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>scholar year:</strong>
+                <strong>المستوى الدراسي:</strong>
                 {{ $chababounauser->scholar_year }}
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>tel:</strong>
+                <strong>رقم الهاتف:</strong>
                 {{ $chababounauser->tel }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Inscripted at:</strong>
+                <strong>سجل في:</strong>
                 {{ $chababounauser->created_at }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Inscripted in:</strong>
+                <strong>سجل بـ:</strong>
                 {{ $chababounauser->inscripted_in }}
             </div>
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Status:</strong>
+                <strong>الطلب:</strong>
                 {{ $chababounauser->status }}
             </div>
         </div>

@@ -130,6 +130,15 @@
                             <?php echo 'نسيت ملء رقم الهاتف أو هو خاطئ'; ?>
                         </div>
                     @enderror
+</div>
+                <div class="InputBox">
+                    <span>:البريد الالكتروني</span>
+                    <input type="email" name="email" value="{{old('email')}}">
+                    @error('email')
+                        <div class="error">
+                            <?php echo 'نسيت ملء بريدك الالكتروني    '; ?>
+                        </div>
+                    @enderror
 
                     <br><br>
                     <span>أدخل صورتك</span>

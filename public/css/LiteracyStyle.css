@@ -164,7 +164,11 @@ section .ContentBox .FormBox .InputBox input[name='place']{
 }
 
 section .ContentBox .FormBox .InputBox input[name='tel']{
-    width: 40%;
+    width: 30%;
+}
+
+section .ContentBox .FormBox .InputBox input[name='email']{
+    width: 60%;
 }
 
 section .ContentBox .FormBox .InputBox input[name='residence']{

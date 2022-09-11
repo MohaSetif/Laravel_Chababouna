@@ -22,6 +22,10 @@ class TahdiriController extends Controller
             'tel' => 'required|regex:/(0)[0-9]{9}/',
             ]);
 
+            $tahdiri = Chababounauser::where([
+                'email' => $req->email,
+              ])->first();
+              if(!$tahdiri){
         $e = new Chababounauser;
         $e->name = strip_tags($req->name);
         $e->surname = strip_tags($req->surname);
@@ -45,5 +49,10 @@ class TahdiriController extends Controller
         $e->tel = strip_tags($req->tel);
         $e->save();
         return redirect('إرسال-الاستمارة');
+        }else{
+            echo "<script>";
+            echo "alert('هذا المستخدم موجود');";
+            echo "</script>";
+           }
     }
 }

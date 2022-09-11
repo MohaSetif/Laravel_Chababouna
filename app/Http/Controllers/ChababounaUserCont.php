@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Chababounauser;
 use App\Models\Student;
-use App\Models\Illiterate;
 use App\Models\Tahdiri;
 use App\Models\Tamhidi;
 use App\Models\Course;
@@ -65,7 +64,7 @@ class ChababounaUserCont extends Controller
 
             $image = $req->file('photo');
             $photoname = date('YmdHis').'.'.$image->extension();
-            $filePath = public_path('/uploads/utilisateurs/');
+            $filePath = public_path('/uploads/utilisateurs');
             $image->move($filePath, $photoname);
             $input['photo'] = $photoname;
             }
@@ -133,31 +132,7 @@ class ChababounaUserCont extends Controller
 
                     $image = $req->file('photo');
                     $photoname = date('YmdHis').'.'.$image->extension();
-                    $filePath = public_path('/uploads/utilisateurs/');
-                    $image->move($filePath, $photoname);
-                    $input['photo'] = $photoname;
-                    }
-            return redirect()->route('chababounausers.index')->with('success', 'تم قبول مستخدم جديد');
-            break;
-
-            case('محو-الأمية'):
-                Illiterate::create([
-                    'name'=>$chababounauser->name,
-                    'surname'=>$chababounauser->surname,
-                    'sex'=>$chababounauser->sex,
-                    'day'=>$chababounauser->day,
-                    'month'=>$chababounauser->month,
-                    'year'=>$chababounauser->year,
-                    'place'=>$chababounauser->place,
-                    'residence'=>$chababounauser->residence,
-                    'photo'=>$chababounauser->photo,               
-                    'tel'=>$chababounauser->tel,
-                ]);
-                if(!empty($req->hasFile('photo'))){
-
-                    $image = $req->file('photo');
-                    $photoname = date('YmdHis').'.'.$image->extension();
-                    $filePath = public_path('/uploads/utilisateurs/');
+                    $filePath = public_path('/uploads/utilisateurs');
                     $image->move($filePath, $photoname);
                     $input['photo'] = $photoname;
                     }
@@ -185,23 +160,10 @@ class ChababounaUserCont extends Controller
 
                     $image = $req->file('photo');
                     $photoname = date('YmdHis').'.'.$image->extension();
-                    $filePath = public_path('/uploads/utilisateurs/');
+                    $filePath = public_path('/uploads/utilisateurs');
                     $image->move($filePath, $photoname);
                     $input['photo'] = $photoname;
                     }
-            return redirect()->route('chababounausers.index')->with('success', 'تم قبول مستخدم جديد');
-            break;
-
-            case('دروس-الدعم'):
-                Course::create([
-                    'name'=>$chababounauser->name,
-                    'surname'=>$chababounauser->surname,
-                    'sex'=>$chababounauser->sex,
-                    'scholar_year'=>$chababounauser->scholar_year,
-                    'local'=>$chababounauser->local,
-                    'tel'=>$chababounauser->tel,
-                    'DadTel'=>$chababounauser->DadTel,
-                ]);
             return redirect()->route('chababounausers.index')->with('success', 'تم قبول مستخدم جديد');
             break;
 
@@ -224,7 +186,7 @@ class ChababounaUserCont extends Controller
 
                     $image = $req->file('photo');
                     $photoname = date('YmdHis').'.'.$image->extension();
-                    $filePath = public_path('/uploads/utilisateurs/');
+                    $filePath = public_path('/uploads/utilisateurs');
                     $image->move($filePath, $photoname);
                     $input['photo'] = $photoname;
                     }
@@ -251,7 +213,7 @@ class ChababounaUserCont extends Controller
 
                     $image = $req->file('photo');
                     $photoname = date('YmdHis').'.'.$image->extension();
-                    $filePath = public_path('/uploads/utilisateurs/');
+                    $filePath = public_path('/uploads/utilisateurs');
                     $image->move($filePath, $photoname);
                     $input['photo'] = $photoname;
                     }

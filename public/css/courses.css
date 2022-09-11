@@ -176,6 +176,10 @@ section .ContentBox .FormBox .InputBox input[name='DadTel']{
     width: 40%;
 }
 
+section .ContentBox .FormBox .InputBox input[name='email']{
+    width: 60%;
+}
+
 
 section .ContentBox .FormBox .InputBox input[name='sex']{
     width: 10%;

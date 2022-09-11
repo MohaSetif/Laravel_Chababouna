@@ -18,12 +18,16 @@ class EtudiantController extends Controller
             'year' => 'required|max:120',
             'place' => 'required|max:120',
             'residence' => 'required|max:120',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'scholar_year' => 'required|max:120',
             'tel' => 'required|regex:/(0)[0-9]{9}/',
             ]);
 
+            $student = Chababounauser::where([
+                'email' => $req->email,
+              ])->first();
+              if(!$student){
         $e = new Chababounauser;
         $e->name = strip_tags($req->name);
         $e->surname = strip_tags($req->surname);
@@ -49,24 +53,10 @@ class EtudiantController extends Controller
         $e->tel = strip_tags($req->tel);
         $e->save();
         return redirect('إرسال-الاستمارة');
+        }else{
+            echo "<script>";
+            echo "alert('هذا المستخدم موجود');";
+            echo "</script>";
+           }
     }
-
-    // function loginUser(Request $req){
-    //     $this->validate($req,[
-    //         'name' => 'required|max:120',
-    //         'surname' => 'required|max:120',
-    //         'email' => 'required',
-    //         'tel' => 'required|regex:/(0)[0-9]{9}/',
-    //         ]);
-    //         $name = Student::where('name', '=', $req->name)->first();
-    //         $surname = Student::where('surname', '=', $req->surname)->first();
-    //         $email = Student::where('email', '=', $req->email)->first();
-    //         $tel = Student::where('tel', '=', $req->Tel)->first();
-    //         if($name && $surname && $email && $tel){
-    //             $req->session()->put('name', $name->name);
-    //             return redirect('الصفحة-الرئيسية');
-    //         }else{
-    //             return back()->with('fail', 'هذا المستعمل غير موجود');
-    //         }
-    // }
 }

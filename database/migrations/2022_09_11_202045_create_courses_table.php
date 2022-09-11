@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('scholar_year');
             $table->string('local')->nullable();
             $table->string('inscripted_in')->default('دروس-الدعم');
+            $table->string('email');
             $table->string('tel');
             $table->string('DadTel');
             $table->timestamps();
