@@ -19,7 +19,7 @@
                   <h3 class="card__title">المستوى التمهيدي</h3>            
                 </div>
               </div>
-              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+              <p class="card__description">من الواجب تربية الروح على الأخلاق والقيم الحميدة منذ الصغر.</p>
             </div>
           </a>      
         </li>
@@ -33,7 +33,7 @@
                   <h3 class="card__title">المستوى التحضيري</h3>            
                 </div>
               </div>
-              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+              <p class="card__description">أحضروا أطفالكم إلينا و سنقوم بالاهتمام بهم و تعليمهم.</p>
             </div>
           </a>      
         </li>
@@ -47,7 +47,7 @@
                   <h3 class="card__title">دروس الدعم</h3>
                 </div>
               </div>
-              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+              <p class="card__description">لديك مشكلة في الدراسة؟ لا مشكلة، سجل الآن.</p>
             </div>
           </a>
         </li>
@@ -61,7 +61,7 @@
                   <h3 class="card__title">التعليم القرآني</h3>        
                 </div>
               </div>
-              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+              <p class="card__description">فالحق و الحق يقال، خيرنا من تعلم القرآن و علمه.</p>
             </div>
           </a>
         </li>
@@ -75,7 +75,7 @@
                   <h3 class="card__title">محو الأمية</h3>
                 </div>          
               </div>
-              <p class="card__description">معرفة القراءة والكتابة وصفت بأنها القدرة على القراءة للمعرفة والكتابة على نحو متماسك والتفكير بشكل نقدي حول الكلمة المكتوبة.</p>
+              <p class="card__description">(مغلق الآن) معرفة القراءة والكتابة وصفت بأنها القدرة على القراءة للمعرفة والكتابة على نحو متماسك والتفكير بشكل نقدي حول الكلمة المكتوبة.</p>
             </div>
           </a>
         </li>
@@ -89,7 +89,7 @@
                   <h3 class="card__title">الانخراط إلى الجمعية</h3>
                 </div>          
               </div>
-              <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+              <p class="card__description">انخرط الآن و ساهم بكل ما يمكنك من مواهب و قدرات تساعد على تطوير الجمعية و مساندة الناس.</p>
             </div>
           </a>
         </li>       

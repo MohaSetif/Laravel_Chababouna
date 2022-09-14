@@ -2,6 +2,11 @@
     font-family: Janna;
     src: url(/fonts/Janna_LT_Bold.ttf)
   }
+
+@font-face{
+  font-family: Boutros;
+  src: url(/fonts/Boutros.ttf);
+}
   
   :root {
       --surface-color: #fff;
@@ -115,9 +120,11 @@
     .card__description {
       padding: 0 2em 2em;
       margin: 0;
-      color: #bdd7c3;  
+      color: #4d915d;  
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 3;
       overflow: hidden;
+      font-family: Boutros;
+      font-size: 17px;
     }    
