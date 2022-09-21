@@ -23,6 +23,7 @@ body{
     justify-content: center;
     text-align: center;
     font-size: 10px;
+    direction: rtl;
 }
 
 .example input[type=text] {
@@ -37,7 +38,7 @@ body{
 }
 
 .example button {
-  float: left;
+  float: right;
   width: 10%;
   padding: 10px;
   background: #0db116;
@@ -63,6 +64,7 @@ body{
     background-color: white;
     max-height: 590px;
     overflow-y: auto;
+    direction: rtl;
   }
 
   table{
@@ -100,21 +102,27 @@ table tbody tr:hover{
 
 @media (max-width: 560px){
 
+  .body{
+    height: 100vh;
+  }
+
+  .example{
+    width: 76%;
+  }
+
   .example input[type=text] {
-    padding: 4px;
     font-size: 17px;
     border: 1px solid grey;
     float: right;
-    width: 87.2%;
+    width: 75%;
     background: #f1f1f1;
     direction: rtl;
     font-family: Janna;
   }
   
   .example button {
-    float: left;
-    width: 10%;
-    padding: 10px;
+    float: right;
+    width: 20%;
     background: #0db116;
     color: white;
     font-size: 17px;
@@ -125,10 +133,11 @@ table tbody tr:hover{
   
     .table{
       margin-top: 11px;
-      width: 359px;
+      width: 360px;
       background-color: white;
-      max-height: 610px;
+      max-height: 596px;
       overflow-y: auto;
+      direction: rtl;
     }
 
     table {

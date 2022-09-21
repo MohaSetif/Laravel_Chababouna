@@ -17,35 +17,35 @@
 <table id="userTable">
     <thead>
         <tr>
-           <th>الصورة</th>
-           <th>عدد النسخ</th>
-           <th>الملاحظة</th>
-           <th>عدد الأجزاء</th>
-           <th>دار النشر</th>
-           <th>التخريج</th>
-           <th>التحقيق</th>
-           <th>المؤلف</th>
-           <th>العنوان</v>
-           <th>التخصص</th>
-           <th>تاريخ الإدخال</th>
            <th>الرقم</th>
+           <th>تاريخ الإدخال</th>
+           <th>التخصص</th>
+           <th>العنوان</v>
+           <th>المؤلف</th>
+           <th>التحقيق</th>
+           <th>التخريج</th>
+           <th>دار النشر</th>
+           <th>عدد الأجزاء</th>
+           <th>الملاحظة</th>
+           <th>عدد النسخ</th>
+           <th>الصورة</th>
         </tr>
     </thead>
     @foreach($books as $item)
     <tbody>
       <tr>
-      <td><img src="uploads/books/{{ $item->photo }}" width="100px"></td></td>
-        <td>{{ $item->copies }}</td>
-        <td>{{ $item->note }}</td>
-        <td>{{ $item->parts }}</td>
-        <td>{{ $item->publication }}</td>
-        <td>{{ $item->documentation }}</td>
-        <td>{{ $item->review }}</td>
-        <td>{{ $item->writer_name }}</td>
-        <td>{{ $item->title }}</td>
-        <td>{{ $item->field }}</td>
-        <td>{{ $item->insert_date }}</td>
-        <td>{{ $item->id }}</td>
+         <td>{{ $item->id }}</td>
+         <td>{{ $item->insert_date }}</td>
+         <td>{{ $item->field }}</td>
+         <td>{{ $item->title }}</td>
+         <td>{{ $item->writer_name }}</td>
+         <td>{{ $item->review }}</td>
+         <td>{{ $item->documentation }}</td>
+         <td>{{ $item->publication }}</td>
+         <td>{{ $item->parts }}</td>
+         <td>{{ $item->note }}</td>
+         <td>{{ $item->copies }}</td>
+         <td><img src="uploads/books/{{ $item->photo }}" width="100px"></td></td>
       </tr>
     </tbody>
     @endforeach

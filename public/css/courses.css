@@ -200,6 +200,14 @@ section .ContentBox .FormBox .InputBox input[name='sex']{
 }
 
 @media (max-width: 560px){
+
+    .InputBox1 div span{
+        display: flex;
+        font-family: Janna;
+        margin: 3px;
+        font-size: 10px;
+    }
+
     section .ImgBox{
         position: absolute;
         top: 0;

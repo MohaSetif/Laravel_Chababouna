@@ -16,7 +16,7 @@
       <div class="menu-btn"></div>
       <div class="navigation">
         <div class="navigation-items">
-          <a href="الخيارات">سجل الآن</a>
+          <a href="الخيارات">قسم التسجيلات</a>
         </div>
       </div>
     </header>
@@ -226,11 +226,11 @@
 
 
       <div class="slider-navigation">
-        <div class="nav-btn"></div>
-        <div class="nav-btn"></div>
-        <div class="nav-btn"></div>
-        <div class="nav-btn"></div>
-        <div class="nav-btn active"></div>
+        <a class="nav-btn">إنجازاتنا</a>
+        <a class="nav-btn">نشاطاتنا</a>
+        <a class="nav-btn">لجاننا</a>
+        <a class="nav-btn">مكتبتنا</a>
+        <a class="nav-btn active">صفحتنا</a>
       </div>
 
     </section>

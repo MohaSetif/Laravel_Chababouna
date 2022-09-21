@@ -75,7 +75,7 @@ section .ContentBox .FormBox{
 
 section .ContentBox .FormBox h2{
     font-weight: 600;
-    font-size: 70px;
+    font-size: 50px;
     text-transform: uppercase;
     border-bottom: 4px solid ＃ff4584;
     font-family: Uthmanic;
